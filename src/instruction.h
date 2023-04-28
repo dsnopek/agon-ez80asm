@@ -158,7 +158,7 @@ typedef enum {
 typedef struct {
     permittype          operandA;           // Filter for operandA - which register applies?
     permittype          operandB;           // Filter for operandB
-    bool                ddfdpermitted;         
+    bool                ddfdpermitted;
     opcodetransformtype transformA;         // Do we transform acc to operandA
     opcodetransformtype transformB;         //  "        "       " "  operandB
     uint8_t             prefix;            // base prefix1, or 0 if none to output
@@ -188,7 +188,11 @@ enum {
     ASM_BLKL,
     ASM_MACRO_START,
     ASM_MACRO_END,
-    ASM_INCBIN
+    ASM_INCBIN,
+    ASM_DEFINE,
+    ASM_IFDEF,
+    ASM_ELSE,
+    ASM_ENDIF,
 };
 
 typedef enum {
